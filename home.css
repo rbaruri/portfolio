@@ -56,7 +56,22 @@ body::-webkit-scrollbar-thumb {
   z-index: 7;
   display: block;
 }
+.banner-text h1 {
+  font-size: 4rem;
+  color: #aaf;
+  text-align: center;
+  text-shadow: 0 0 15px rgb(153, 153, 172), 0 0 20px #aaf;
+  animation: glow 1s ease-in-out infinite alternate;
+}
 
+@keyframes glow {
+  from {
+    text-shadow: 0 0 15px rgb(153, 153, 172), 0 0 20px #aaf;
+  }
+  to {
+    text-shadow: 0 0 20px #aaf;
+  }
+}
 #canvas {
   background-color: #0f172a;
   width: 100%;
@@ -313,11 +328,14 @@ footer{
     background-color: #1b1b1b;
     height: 50vh;
    }
-   .footer{
-     width: 80%;
-     margin: 0 auto;
-     color: #fff;
-     padding: 100px 0 20px;
+.footer{
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(153, 153, 172);
+    padding: 100px 0 20px;
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
    }
-
-   
+footer h1{
+  font-weight: bolder;
+  color: #aaf;
+}
