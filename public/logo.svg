@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <rect width="56" height="56" x="0" y="4" rx="14" fill="#0f1620"/>
+  <path
+    d="M17 15h15.4c6 0 10.3 3.7 10.3 9.2 0 4.1-2.3 7.2-6.1 8.5L45 45h-6.8L31 33.6H22.6V45H17V15Zm5.6 4.9v10h9.3c3.2 0 5.1-1.7 5.1-5s-1.9-5-5.1-5h-9.3Z"
+    fill="#e8ecf1"
+  />
+  <circle cx="45" cy="15.5" r="3.5" fill="#b45309"/>
+  <text
+    x="72"
+    y="40"
+    fill="#10151c"
+    font-family="'Space Grotesk', 'Segoe UI', sans-serif"
+    font-size="34"
+    font-weight="700"
+    letter-spacing="-0.05em"
+  >rajasree</text>
+  <text
+    x="228"
+    y="40"
+    fill="#b45309"
+    font-family="'IBM Plex Mono', ui-monospace, monospace"
+    font-size="16"
+    font-weight="500"
+    letter-spacing="0.04em"
+  >rb</text>
+</svg>

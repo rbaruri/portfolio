@@ -17,11 +17,101 @@
 }
 
 .nav-brand {
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.03em;
   color: var(--ink);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  line-height: 1;
+}
+
+.logo-mark {
+  display: block;
+  flex-shrink: 0;
+  color: var(--ink);
+  --logo-fg: var(--paper);
+  --logo-accent: var(--signal);
+  filter: drop-shadow(0 1px 0 color-mix(in srgb, var(--ink) 8%, transparent));
+}
+
+.logo-word {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.logo-name {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  color: inherit;
+}
+
+.logo-tag {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--signal);
+  border: 1px solid color-mix(in srgb, var(--signal) 45%, transparent);
+  border-radius: 0.25rem;
+  padding: 0.12em 0.35em 0.08em;
+}
+
+.logo-sm {
+  gap: 0.55rem;
+}
+
+.logo-sm .logo-name {
+  font-size: 1.08rem;
+}
+
+.logo-sm .logo-tag {
+  font-size: 0.62rem;
+}
+
+.logo-md .logo-name {
+  font-size: 1.25rem;
+}
+
+.logo-md .logo-tag {
+  font-size: 0.7rem;
+}
+
+.logo-lg {
+  gap: 1rem;
+}
+
+.logo-lg .logo-name {
+  font-size: clamp(2.5rem, 8.5vw, 4.75rem);
+}
+
+.logo-lg .logo-tag {
+  font-size: clamp(0.72rem, 1.7vw, 0.95rem);
+  padding: 0.2em 0.45em 0.15em;
+  align-self: center;
+}
+
+.hero-brand {
+  margin: 0 0 1rem;
+  color: #f3f6fa;
+}
+
+.hero-brand .logo-mark {
+  color: #f3f6fa;
+  --logo-fg: #0f1620;
+  --logo-accent: #e07a2f;
+  filter: none;
+}
+
+.hero-brand .logo-tag {
+  color: #e07a2f;
+  border-color: color-mix(in srgb, #e07a2f 55%, transparent);
 }
 
 .nav nav {
@@ -104,15 +194,6 @@
 .hero-content {
   max-width: 42rem;
   animation: rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
-}
-
-.hero-brand {
-  font-size: clamp(3.2rem, 11vw, 6.75rem);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 0.9;
-  color: #f3f6fa;
-  margin: 0 0 0.85rem;
 }
 
 .hero h1 {

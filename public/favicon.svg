@@ -1,12 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="4" fill="#0f1620"/>
-  <text
-    x="16"
-    y="21"
-    text-anchor="middle"
-    font-family="ui-monospace, monospace"
-    font-size="13"
-    font-weight="600"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#0f1620"/>
+  <path
+    d="M15 11h13.2c5.1 0 8.8 3.2 8.8 7.9 0 3.5-2 6.2-5.2 7.3L38 37h-5.8l-6.1-9.8H19.8V37H15V11Zm4.8 4.2v8.6h8c2.7 0 4.4-1.5 4.4-4.3s-1.7-4.3-4.4-4.3h-8Z"
     fill="#e8ecf1"
-  >R</text>
+  />
+  <circle cx="38.5" cy="11.5" r="3" fill="#b45309"/>
 </svg>

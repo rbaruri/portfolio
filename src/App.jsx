@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Logo from './components/Logo'
 import {
   certifications,
   domainsWorked,
@@ -21,8 +22,8 @@ function App() {
   return (
     <div className="page">
       <header className="nav">
-        <a className="nav-brand" href="#top">
-          {profile.name}
+        <a className="nav-brand" href="#top" aria-label="Rajasree home">
+          <Logo size="sm" />
         </a>
         <nav aria-label="Primary">
           <a href="#about">About</a>
@@ -50,7 +51,9 @@ backend · cloud · systems`}
           </div>
 
           <div className="hero-content">
-            <p className="hero-brand">{profile.name}</p>
+            <div className="hero-brand">
+              <Logo size="lg" />
+            </div>
             <h1>{profile.title}</h1>
             <p className="hero-meta mono">
               {profile.fullName} · {profile.location}
