@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Logo from './components/Logo'
 import {
   certifications,
@@ -14,24 +14,71 @@ import {
 } from './content'
 import './App.css'
 
+const navLinks = [
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'systems', label: 'Systems' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' },
+]
+
 function App() {
   const [activeSkill, setActiveSkill] = useState(skillDomains[0].id)
+  const [activeSection, setActiveSection] = useState('')
   const activeDomain =
     skillDomains.find((domain) => domain.id === activeSkill) ?? skillDomains[0]
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.id))
+      .filter(Boolean)
+
+    if (!sections.length) return undefined
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
+        if (visible[0]?.target?.id) {
+          setActiveSection(visible[0].target.id)
+        }
+      },
+      {
+        rootMargin: '-20% 0px -55% 0px',
+        threshold: [0.1, 0.25, 0.5],
+      },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="page">
       <header className="nav">
-        <a className="nav-brand" href="#top" aria-label="Rajasree home">
+        <a
+          className="nav-brand"
+          href="#top"
+          aria-label="Rajasree home"
+          onClick={() => setActiveSection('')}
+        >
           <Logo size="sm" />
         </a>
         <nav aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#systems">Systems</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={activeSection === link.id ? 'active' : undefined}
+              aria-current={activeSection === link.id ? 'true' : undefined}
+              onClick={() => setActiveSection(link.id)}
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
       </header>
 
