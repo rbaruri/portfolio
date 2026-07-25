@@ -1,0 +1,71 @@
+:root {
+  --ink: #10151c;
+  --muted: #4d5866;
+  --paper: #e8ecf1;
+  --paper-2: #dce2ea;
+  --line: rgba(16, 21, 28, 0.14);
+  --signal: #b45309;
+  --grid: rgba(16, 21, 28, 0.06);
+  --terminal: #0f1620;
+
+  --sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  color: var(--muted);
+  background: var(--paper);
+  font-family: var(--sans);
+  font-size: 16.5px;
+  line-height: 1.55;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.mono {
+  font-family: var(--mono);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--signal) 30%, white);
+  color: var(--ink);
+}
